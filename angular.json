@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngCompleteGuide"
+    }
+  },
+  "defaultProject": "ngCompleteGuide",
+  "cli": {
+    "analytics": false
+  }
 }
