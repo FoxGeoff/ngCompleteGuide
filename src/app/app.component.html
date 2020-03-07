@@ -1,16 +1,26 @@
-<div class="card-header">
-  <app-header></app-header>
-</div>
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav role="navigation">
+    <div fxlayout="row" fxLayoutAlign="center center">LOGO</div>
+    <div>
+      <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div>
+      <app-header (sidenavToggle)="sidenav.toggle()"></app-header>
+    </div>
+    <main>
+      <!-- <router-outlet></router-outlet> -->
 
-<div
-  class="card"
-  fxLayout="column"
-  fxLayoutGap.gt-md="20px"
->
-  <section>
-    <app-recipes></app-recipes>
-  </section>
-  <section>
-    <app-shopping-list></app-shopping-list>
-  </section>
-</div>
+      <div class="container" fxLayout="column" fxLayoutGap.gt-md="20px">
+        <section>
+          <app-recipes></app-recipes>
+        </section>
+        <section>
+          <app-shopping-list></app-shopping-list>
+        </section>
+      </div>
+
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>
